@@ -35,7 +35,12 @@ app.get('/get-posts', async (_, res) => {
             },
             {
                 $unwind: '$session',
-            }
+            },
+            {
+                $sort: {
+                    createdAt: -1, // Order by creation date descending
+                },
+            },
         ]);
         res.status(StatusCode.OK).send(posts);
     } catch (error) {
