@@ -15,12 +15,10 @@
 						"method": "POST",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/create-anonymous-session",
-							"protocol": "http",
+							"raw": "{{api_gateway}}/create-anonymous-session",
 							"host": [
-								"localhost"
+								"{{api_gateway}}"
 							],
-							"port": "3000",
 							"path": [
 								"create-anonymous-session"
 							]
@@ -43,12 +41,10 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:3000/create-post",
-							"protocol": "http",
+							"raw": "{{api_gateway}}/create-post",
 							"host": [
-								"localhost"
+								"{{api_gateway}}"
 							],
-							"port": "3000",
 							"path": [
 								"create-post"
 							]
@@ -62,12 +58,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/get-session?sessionCode=04e33f65-35c8-40d5-b48c-22f59ae7db59",
-							"protocol": "http",
+							"raw": "{{api_gateway}}/get-session?sessionCode=04e33f65-35c8-40d5-b48c-22f59ae7db59",
 							"host": [
-								"localhost"
+								"{{api_gateway}}"
 							],
-							"port": "3000",
 							"path": [
 								"get-session"
 							],
@@ -87,12 +81,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/get-posts",
-							"protocol": "http",
+							"raw": "{{api_gateway}}/get-posts",
 							"host": [
-								"localhost"
+								"{{api_gateway}}"
 							],
-							"port": "3000",
 							"path": [
 								"get-posts"
 							]
@@ -106,12 +98,10 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:3000/health-check-all",
-							"protocol": "http",
+							"raw": "{{api_gateway}}/health-check-all",
 							"host": [
-								"localhost"
+								"{{api_gateway}}"
 							],
-							"port": "3000",
 							"path": [
 								"health-check-all"
 							]
@@ -211,6 +201,33 @@
 				}
 			},
 			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api_gateway",
+			"value": "",
+			"type": "string"
 		}
 	]
 }
