@@ -1,0 +1,11 @@
+{
+    "Express endpoint": {
+        "prefix": "expressEnd",
+        "description": "Express endpoint",
+        "body": [
+            "app.get('/${1:path}', (req, res) => {",
+            "    res.status(StatusCode.${2:OK}).send({$0});",
+            "});"
+        ]
+    }
+}
