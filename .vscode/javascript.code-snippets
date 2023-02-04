@@ -3,7 +3,7 @@
         "prefix": "expressEnd",
         "description": "Express endpoint",
         "body": [
-            "app.get('/${1:path}', (req, res) => {",
+            "app.get('/${1:path}', async (req, res) => {",
             "    res.status(StatusCode.${2:OK}).send({$0});",
             "});"
         ]
